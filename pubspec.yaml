@@ -1,0 +1,44 @@
+name: vyapar_new
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 1. Icons (Latest)
+  cupertino_icons: ^1.0.8
+
+  # 2. Gemini AI (Dimag - Latest Stable)
+  google_generative_ai: ^0.4.7
+
+  # 3. Mic / Speech to Text (CRITICAL UPDATE: 7.0.0)
+  # Ye version Android 13/14 par crash nahi hota
+  speech_to_text: ^7.0.0
+
+  # 4. Camera & Gallery (Latest)
+  image_picker: ^1.1.2
+
+  # 5. ML Model / OCR (Ye hai wo Naya Update) 🤖
+  # Isse bill scanning bohot fast hogi
+  google_mlkit_text_recognition: ^0.13.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Coding standards
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # 📂 ASSETS SECTION (Yahan humne aapka Kaggle Data joda hai)
+  # Dhyan rahe: 'assets' word 'flutter' se 2 space aage hona chahiye
+  assets:
+    - assets/smart_vyapar_logic.json
