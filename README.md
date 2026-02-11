@@ -1,16 +1,28 @@
 # vyapar_new
+What Smart Vyapar Does
+Smart Vyapar is a hands-free AI operating system for Kirana shopkeepers and traders, powered by voice in Hindi/Hinglish.
 
-A new Flutter project.
+Voice-Controlled Ledger: Say "Ramesh ke naam pe 500 rupay likh do" to instantly update Udhaari (credit) records in the database.
 
-## Getting Started
+AI-Powered OCR Bill Scanning: Voice command "Bill scan karo" triggers camera, reads invoice, and auto-updates inventory.
 
-This project is a starting point for a Flutter application.
+B2B Networking: Matches new traders with shopkeepers for better rates, breaking "who knows whom" barriers.
 
-A few resources to get you started if this is your first Flutter project:
+Logistics Tracking: GPS verifies shop location on voice trigger for deliveries.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Context-Aware Memory: Remembers recent actions (e.g., "Iska total kya hai?" refers to the last scanned bill).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Always-On Overlay: Floating widget accessible even on locked screen.
+
+How We Built It
+Built with Flutter for seamless Android/iOS experience, deeply integrated with Google Generative AI.
+
+Core AI: Gemini 3.0 Flash for low-latency voice processing and multimodal inputs.
+
+Function Calling: Custom Dart tools like startOCRScan() and updateShopkeeperLocation() executed by Gemini's intent detection.
+
+State Injection: AppStateManager feeds real-time context (inventory, user) into every AI prompt for memory.
+
+Overlay System: Android SYSTEM_ALERT_WINDOW permission for persistent voice UI.
+
+Overcame Challenges: Fixed google_generative_ai v0.4.7+ schema issues, background lifecycle crashes, and context loss via feedback loops
